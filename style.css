@@ -6,3 +6,8 @@
     --fonte-principal: 'Inter';
     --botao-azul-efeito: #ffffff;
 }
+
+img{
+    width: 200px;
+    height: auto;
+}
