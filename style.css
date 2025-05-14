@@ -6,12 +6,11 @@
     --cor-de-fundo: #00030C;
     --fonte-principal: 'Inter';
     --botao-azul-efeito: #3c92fa;
+
 .color{
     background-color: black;
     color: rgb(5, 97, 5);
 }
-
-<<<<<<< HEAD
 body {
 
     background-color: var(--cor-de-fundo);
