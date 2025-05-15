@@ -1,7 +1,7 @@
 :root {
-    --branco-principal: #FFFFFF;
-    --cinza-secundario: #C0C0C0;
-    --botao-azul: #167BF7;
+    --branco-principal: #2b2828;
+    --cinza-secundario: #585353;
+    --botao-azul: #3f5c5c;
     --cor-de-fundo: #00030C;
     --fonte-principal: 'Inter';
     --botao-azul-efeito: #3c92fa;
@@ -21,7 +21,7 @@ padding: 0;
 }
 
 .principal {
-background-image: url("Background.png");
+background-image: url("ecomadeira.jpg");
 background-repeat: no-repeat;
 background-size: contain;
 align-items: center;
@@ -99,3 +99,49 @@ color: var(--cinza-secundario);
    display: inline-block;
    margin-top: 1em;
 }
+.dispositivos {
+   text-align: center;
+   }
+
+   .dispositivos_titulo {
+ font-size: 48px;
+   color : var(--branco-principal);
+   }
+
+   .dispositivos_lista {
+   display: flex;
+   justify-content: center;
+   list-style-type: none;
+   margin: 5em 0;
+   }
+
+   .lista_item {
+   font-size: 32px;
+   color: var(--branco-principal);
+   }
+   
+
+.rodape {
+   text-align: center;
+   margin: 5em 3em;
+   }
+   .rodape_lista {
+   display: flex;
+   justify-content: center;
+   list-style-type: none;
+   margin-top: 1em;
+   
+   .lista_link a{
+   text-decoration: none;
+   color: var(--branco-principal);
+   margin-left: 1em;
+   }
+
+   .rodape_texto {
+   margin: 1em 0;
+   color: var(--cinza-secundario);
+   font-size: 14px;
+   }
+   }
+   
+   
