@@ -1,313 +1,310 @@
-<style> :root {
-   --branco-principal: #ffffff;
-   --cinza-secundario: #b3b3b3;
-   /* Cor mais clara para o cinza */
-   --botao-azul: #6366f1;
-   /* Um tom de azul mais moderno */
-   --botao-azul-hover: #d946ef;
-   /* Um tom de roxo para o hover - mais interessante */
-   --cor-de-fundo: #f3f4f6;
-   /* Fundo bem claro */
-   --fonte-principal: 'Inter', sans-serif;
-   --sombra-padrao: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-   /* Sombra mais suave */
-   --transicao-padrao: all 0.3s ease;
-   /* Transições suaves */
-   --borda-arredondada: 0.5rem;
+:root {
+    --branco-principal: #ffffff;
+    --cinza-secundario: #b3b3b3;
+    --cinza-medio: #6b7280;
+    --cinza-escuro: #374151;
+    --botao-azul: #6366f1;
+    --botao-azul-hover: #d946ef;
+    --cor-de-fundo: #f5f5dc;
+    --cor-de-fundo-claro: #f5f5dc;
+    --fonte-principal: 'Inter', sans-serif;
+    --sombra-padrao: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    --transicao-padrao: all 0.3s ease;
+    --borda-arredondada: 0.5rem;
+    --verde-claro: #e6f4e5;
+    --verde-medio: #86ef7d;
+    --verde-escuro: #16a34a;
 }
 
 body {
-   background-color: var(--cor-de-fundo);
-   color: #1f2937;
-   /* Texto mais escuro para melhor contraste */
-   font-family: var(--fonte-principal);
-   font-size: 1rem;
-   font-weight: 400;
-   margin: 0;
-   padding: 0;
-   line-height: 1.7;
-   /* Aumentei o line-height para melhorar a legibilidade do texto*/
+    background-color: var(--cor-de-fundo);
+    color: #1f2937;
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
 }
 
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   /* Para que padding e border não alterem o tamanho dos elementos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-bege {
+    background-color: var(--cor-de-fundo);
 }
 
 .principal {
-   /* background-image: url("ecomadeira.jpg");  Comentei, pois pode ser problemático carregar */
-   background-repeat: no-repeat;
-   background-size: cover;
-   /* Para cobrir todo o espaço */
-   background-position: center;
-   /* Centraliza a imagem */
-   align-items: center;
-   text-align: center;
-   padding: 4rem 0;
-   /* Adicionei padding vertical */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
 }
 
 .container {
-   max-width: 1200px;
-   /* Limita a largura do container */
-   margin: 0 auto;
-   /* Centraliza o container na página */
-   display: flex;
-   flex-wrap: wrap;
-   /* Permite que os elementos se quebrem em telas menores */
-   justify-content: center;
-   /* Centraliza horizontalmente */
-   align-items: center;
-   /* Centraliza verticalmente */
-   padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 .container__caixa {
-   margin: 2rem;
-   flex: 1 1 300px;
-   /* Permite que cresça e encolha, com base de 300px */
-   min-width: 300px;
-   /* Impede que fique muito estreito */
+    margin: 2rem;
+    flex: 1 1 300px;
+    min-width: 300px;
 }
 
 .container_titulo {
-   font-size: 2.25rem;
-   /* Tamanho maior */
-   font-weight: 700;
-   margin-bottom: 1rem;
-   color: #2d3748;
-   /* Cor de texto mais escura */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.eco-wood-title {
+    color: var(--verde-escuro);
+    font-size: 3rem;
 }
 
 .container_imagem {
-   max-width: 100%;
-   /* Garante que a imagem não ultrapasse o container */
-   height: auto;
-   margin: 1.5rem 0;
-   border-radius: var(--borda-arredondada);
-   /* Usa a variável para arredondar a borda */
-   box-shadow: var(--sombra-padrao);
-   /* Adiciona sombra */
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-padrao);
+}
+
+.rounded-image {
+    border-radius: 1rem;
 }
 
 .container_botao {
-   background-color: var(--botao-azul);
-   border-radius: var(--borda-arredondada);
-   padding: 1rem 2rem;
-   /* Padding horizontal maior */
-   color: var(--branco-principal);
-   display: inline-block;
-   /* Para poder usar margin e padding corretamente */
-   text-decoration: none;
-   margin-bottom: 1rem;
-   transition: var(--transicao-padrao);
-   /* Transição suave */
-   font-weight: 600;
-   /* Negrito */
-   box-shadow: var(--sombra-padrao);
-   text-align: center;
-   /* Centraliza o texto */
+    background-color: var(--botao-azul);
+    border-radius: var(--borda-arredondada);
+    padding: 1rem 2rem;
+    color: var(--branco-principal);
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: var(--transicao-padrao);
+    font-weight: 600;
+    box-shadow: var(--sombra-padrao);
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 .container_botao:hover {
-   background-color: var(--botao-azul-hover);
-   /* Cor de hover */
-   transform: translateY(-2px);
-   /* Levemente para cima no hover */
+    background-color: var(--botao-azul-hover);
+    transform: translateY(-2px);
 }
 
-.botao_secundario {
-   background-color: transparent;
-   border: 2px solid var(--botao-azul);
-   /* Mesma cor da borda do botão principal */
-   color: var(--botao-azul);
-   /* Mesma cor do texto */
+.botao-verde {
+    background-color: var(--verde-medio);
+    color: var(--branco-principal);
 }
 
-.botao_secundario:hover {
-   background-color: rgba(99, 102, 241, 0.1);
-   /* Fundo suave no hover */
-   color: var(--botao-azul);
-   /* Mantém a cor do texto */
-   transform: translateY(-2px);
+.botao-verde:hover {
+    background-color: var(--verde-escuro);
+}
+
+.botao-transparente {
+    background-color: transparent;
+    border: 2px solid var(--verde-medio);
+    color: var(--verde-escuro);
+}
+
+.botao-transparente:hover {
+    background-color: rgba(134, 239, 125, 0.1);
+    color: var(--verde-escuro);
+    transform: translateY(-2px);
 }
 
 .container_aviso {
-   font-size: 0.875rem;
-   /* Tamanho menor */
-   color: var(--cinza-secundario);
-   margin-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--cinza-secundario);
+    margin-top: 1rem;
+}
+
+.texto-pequeno {
+    font-size: 0.75rem;
 }
 
 .secundario {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   /* Centraliza os elementos horizontalmente */
-   align-items: center;
-   /* Alinha verticalmente */
-   margin: 2rem 0;
-   padding: 2rem;
-   /* background-color: #f9fafb;  Ton de fundo muito suave, se necessário */
-   border-radius: var(--borda-arredondada);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: var(--borda-arredondada);
+    background-color: var(--cor-de-fundo-claro);
 }
 
 .secundario__imagem {
-   max-width: 100%;
-   height: auto;
-   border-radius: var(--borda-arredondada);
-   box-shadow: var(--sombra-padrao);
-   flex: 1 1 400px;
-   /* Permite crescer e encolher */
-   min-width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-padrao);
+    flex: 1 1 400px;
+    min-width: 300px;
 }
 
 .container__descricao {
-   padding: 2rem;
-   flex: 1 1 400px;
-   min-width: 300px;
+    padding: 2rem;
+    flex: 1 1 400px;
+    min-width: 300px;
 }
 
 .descricao__titulo {
-   font-size: 3rem;
-   /* Tamanho maior */
-   font-weight: 700;
-   color: #2d3748;
-   margin-bottom: 1rem;
-   line-height: 1.2;
-   /* Melhora o espaçamento entre linhas em títulos longos*/
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.verde-escuro {
+    color: var(--verde-escuro);
 }
 
 .descricao__texto {
-   color: var(--cinza-secundario);
-   font-size: 1.1rem;
-   /* Aumenta um pouco o tamanho da fonte */
-   margin-bottom: 1.5rem;
+    color: var(--cinza-medio);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cinza-medio {
+    color: var(--cinza-medio);
 }
 
 .secundario__botao {
-   display: inline-block;
-   margin-top: 1rem;
+    display: inline-block;
+    margin-top: 1rem;
 }
 
 .dispositivos {
-   text-align: center;
-   padding: 2rem;
+    text-align: center;
+    padding: 2rem;
 }
 
 .dispositivos_titulo {
-   font-size: 3rem;
-   color: #2d3748;
-   margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 2rem;
 }
 
 .dispositivos_lista {
-   display: flex;
-   justify-content: center;
-   list-style-type: none;
-   /* Remove os marcadores de lista padrão */
-   margin: 2rem 0;
-   flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 2rem 0;
+    flex-wrap: wrap;
 }
 
 .lista_item {
-   font-size: 1.5rem;
-   color: var(--botao-azul);
-   /* Cor de destaque */
-   margin: 0 1rem;
-   flex: 0 1 auto;
-   /* Não cresce, mas encolhe se necessário */
+    font-size: 1.5rem;
+    color: var(--verde-escuro);
+    margin: 0 1rem;
+    flex: 0 1 auto;
 }
 
 .lista_item:before {
-   content: '•';
-   /* Adiciona um marcador personalizado */
-   margin-right: 0.5rem;
+    content: '•';
+    margin-right: 0.5rem;
 }
 
 .rodape {
-   text-align: center;
-   padding: 3rem;
-   margin-top: 4rem;
-   border-top: 1px solid #e2e8f0;
-   /* Borda superior suave */
+    text-align: center;
+    padding: 3rem;
+    margin-top: 4rem;
+    border-top: 1px solid #e2e8f0;
 }
 
-.rodape_lista {
-   display: flex;
-   justify-content: center;
-   list-style-type: none;
-   margin-top: 1rem;
-   flex-wrap: wrap;
-}
-
-.lista_link a {
-   text-decoration: none;
-   color: var(--botao-azul);
-   /* Mantém a cor azul */
-   margin: 0.5rem 1rem;
-   font-weight: 500;
-   /* Negrito nos links do rodapé */
-   transition: var(--transicao-padrao);
-}
-
-.lista_link a:hover {
-   color: var(--botao-azul-hover);
-   transform: translateY(-2px);
-}
-
-.rodape_texto {
-   margin: 1rem 0;
-   color: var(--cinza-secundario);
-   font-size: 0.875rem;
+.bg-verde-claro {
+    background-color: var(--verde-claro);
 }
 
 .rodape_logo img {
-   max-width: 150px;
-   height: auto;
-   margin-bottom: 1rem;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
-/* Estilos para telas menores (mobile) */
+.rodape_lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.lista_link a {
+    text-decoration: none;
+    color: var(--verde-escuro);
+    margin: 0.5rem 1rem;
+    font-weight: 500;
+    transition: var(--transicao-padrao);
+}
+
+.link-verde {
+    color: var(--verde-escuro);
+}
+
+.lista_link a:hover {
+    color: var(--botao-azul-hover);
+    transform: translateY(-2px);
+}
+
+.rodape_texto {
+    margin: 1rem 0;
+    color: var(--cinza-escuro);
+    font-size: 0.875rem;
+}
+
+.cinza-escuro {
+    color: var(--cinza-escuro);
+}
+
 @media (max-width: 768px) {
-   .container {
-      grid-template-columns: 1fr;
-      /* Uma coluna em telas pequenas */
-   }
+    .container {
+        grid-template-columns: 1fr;
+    }
 
-   .container__caixa,
-   .secundario__imagem,
-   .container__descricao {
-      width: 100%;
-      margin: 1rem 0;
-      padding: 1rem;
-   }
+    .container__caixa,
+    .secundario__imagem,
+    .container__descricao {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 1rem;
+    }
 
-   .container_titulo,
-   .dispositivos_titulo {
-      font-size: 2.5rem;
-      /* Tamanho de fonte menor em telas pequenas */
-   }
+    .container_titulo,
+    .dispositivos_titulo {
+        font-size: 2rem;
+    }
 
-   .dispositivos_lista {
-      flex-direction: column;
-      /* Lista vertical em telas pequenas */
-   }
+    .dispositivos_lista {
+        flex-direction: column;
+    }
 
-   .lista_item {
-      margin: 0.5rem 0;
-   }
+    .lista_item {
+        margin: 0.5rem 0;
+    }
 
-   .secundario {
-      flex-direction: column;
-      text-align: center;
-   }
+    .secundario {
+        flex-direction: column;
+        text-align: center;
+    }
 
-   .secundario__imagem {
-      margin-bottom: 1rem;
-   }
+    .secundario__imagem {
+        margin-bottom: 1rem;
+    }
 }
-
-</style>
