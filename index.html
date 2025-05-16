@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,8 +23,6 @@
             --verde-claro: #e6f4e5;
             --verde-medio: #86ef7d;
             --verde-escuro: #16a34a;
-            --azul-escuro: #2563eb;
-            --roxo-suave: #ede7f6;
         }
 
         body {
@@ -320,100 +317,8 @@
                 margin-bottom: 1rem;
             }
         }
-
-        .login-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .login-form {
-            background-color: var(--branco-principal);
-            border-radius: var(--borda-arredondada);
-            padding: 2rem;
-            box-shadow: var(--sombra-padrao);
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-        }
-
-        .login-form h2 {
-            margin-bottom: 1.5rem;
-            color: var(--verde-escuro);
-        }
-
-        .login-form label {
-            display: block;
-            margin-top: 1rem;
-            text-align: left;
-            color: var(--cinza-medio);
-        }
-
-        .login-form input {
-            width: 100%;
-            padding: 0.75rem;
-            margin-top: 0.5rem;
-            border: 1px solid #e2e8f0;
-            border-radius: var(--borda-arredondada);
-            transition: var(--transicao-padrao);
-        }
-
-        .login-form input:focus {
-            outline: none;
-            border-color: var(--botao-azul);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        }
-
-        .login-form button {
-            width: 100%;
-            padding: 1rem;
-            margin-top: 2rem;
-            background-color: var(--botao-azul);
-            color: var(--branco-principal);
-            border: none;
-            border-radius: var(--borda-arredondada);
-            cursor: pointer;
-            transition: var(--transicao-padrao);
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .login-form button:hover {
-            background-color: var(--botao-azul-hover);
-            transform: translateY(-2px);
-        }
-
-        .login-form .error-message {
-            color: #dc2626;
-            font-size: 0.875rem;
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        .login-form .close-button {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 1.5rem;
-            color: var(--cinza-medio);
-            cursor: pointer;
-            border: none;
-            background: none;
-        }
-
-        .login-form .close-button:hover {
-            color: var(--cinza-escuro);
-        }
     </style>
 </head>
-
 <body class="bg-bege">
     <header class="principal">
         <div class="container">
@@ -464,55 +369,12 @@
         <p class="rodape_texto cinza-escuro">Eco-Wood © 2024. Todos os direitos reservados.</p>
     </footer>
 
-    <div id="login-container" style="display: none;">
-        <div class="login-form">
-            <button class="close-button" id="close-login">&times;</button>
-            <h2>Entrar na sua conta</h2>
-            <form id="login-form">
-                <label for="username">Nome de Usuário</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Entrar</button>
-                <div id="error-message" class="error-message"></div>
-            </form>
-            <p>
-                <a href="#">Esqueci minha senha</a>
-            </p>
-        </div>
-    </div>
-
     <script>
         const sobreNosBtn = document.getElementById('sobre-nos');
-        const loginContainer = document.getElementById('login-container');
-        const closeLoginBtn = document.getElementById('close-login');
-        const loginForm = document.getElementById('login-form');
-        const errorMessage = document.getElementById('error-message');
 
         sobreNosBtn.addEventListener('click', () => {
-            loginContainer.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        });
-
-        closeLoginBtn.addEventListener('click', () => {
-            loginContainer.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-
-        loginForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            const username = loginForm.username.value;
-            const password = loginForm.password.value;
-
-            if (username === 'usuario' && password === 'senha') {
-                alert('Login bem-sucedido! Redirecionando...');
-                window.location.href = 'index.html';
-            } else {
-                errorMessage.textContent = 'Nome de usuário ou senha incorretos.';
-            }
+            alert('Funcionalidade de login removida. Esta página não possui mais tela de login.');
         });
     </script>
 </body>
-
 </html>
