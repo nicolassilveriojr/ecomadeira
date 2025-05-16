@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login e Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div id="login-form" class="form-container">
+            <button class="close-button" onclick="window.location.href='index.html'">&times;</button>
+            <h2>Entrar na sua conta</h2>
+            <form id="login">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <button type="submit">Entrar</button>
+                <div id="error-message-login" class="error-message"></div>
+            </form>
+            <p>
+                <a href="#">Esqueci minha senha</a>
+            </p>
+            <div class="switch-form">
+                <a href="#" id="switch-to-register">Criar uma conta</a>
+            </div>
+        </div>
+
+        <div id="register-form" class="form-container" style="display: none;">
+            <button class="close-button" onclick="window.location.href='index.html'">&times;</button>
+            <h2>Crie sua conta</h2>
+            <form id="register">
+                <label for="register-username">Nome de Usuário</label>
+                <input type="text" id="register-username" name="username" placeholder="Digite seu nome de usuário"
+                    required>
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" name="email" placeholder="Digite seu email" required>
+                <label for="register-password">Senha</label>
+                <input type="password" id="register-password" name="password" placeholder="Digite sua senha" required>
+                <label for="register-confirm-password">Confirme sua senha</label>
+                <input type="password" id="register-confirm-password" name="confirm-password"
+                    placeholder="Confirme sua senha" required>
+                <button type="submit">Cadastrar</button>
+                <div id="error-message-register" class="error-message"></div>
+            </form>
+            <div class="switch-form">
+                <a href="#" id="switch-to-login">Já tem uma conta? Entrar</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const loginLink = document.getElementById('switch-to-register');
+        const registerLink = document.getElementById('switch-to-login');
+        const loginSubmit = document.getElementById('login');
+        const registerSubmit = document.getElementById('register');
+        const errorMessageLogin = document.getElementById('error-message-login');
+        const errorMessageRegister = document.getElementById('error-message-register');
+
+        loginLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+        });
+
+        registerLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            registerForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+
+        loginSubmit.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const username = loginForm.querySelector('#username').value;
+            const password = loginForm.querySelector('#password').value;
+
+            if (username === 'usuario' && password === 'senha') {
+                window.location.href = 'index.html';
+            } else {
+                errorMessageLogin.textContent = 'Nome de usuário ou senha incorretos.';
+            }
+        });
+
+        registerSubmit.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const username = registerForm.querySelector('#register-username').value;
+            const email = registerForm.querySelector('#register-email').value;
+            const password = registerForm.querySelector('#register-password').value;
+            const confirmPassword = registerForm.querySelector('#register-confirm-password').value;
+
+            if (password !== confirmPassword) {
+                errorMessageRegister.textContent = 'As senhas não coincidem.';
+                return;
+            }
+
+            if (password.length < 8) {
+                errorMessageRegister.textContent = 'A senha deve ter pelo menos 8 caracteres.';
+                return;
+            }
+
+            console.log('Usuário registrado:', username, email, password);
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>
