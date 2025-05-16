@@ -14,6 +14,11 @@
     --verde-claro: #e6f4e5;
     --verde-medio: #86ef7d;
     --verde-escuro: #16a34a;
+    --azul-claro-tabela: #e0f7fa;
+    --azul-medio-tabela: #b2ebf2;
+    --texto-azul-tabela: #00838f;
+    --vermelho-alerta: #ef5350;
+    --amarelo-destaque: #ffeb3b;
 }
 
 body {
@@ -22,9 +27,11 @@ body {
     font-family: var(--fonte-principal);
     font-size: 1rem;
     font-weight: 400;
-    margin: 0;
-    padding: 0;
+    margin: 20px; /* Adicionando margem ao body */
+    padding: 20px; /* Adicionando padding ao body */
     line-height: 1.7;
+    border-radius: var(--borda-arredondada); /* Adicionando borda arredondada ao body */
+    box-shadow: var(--sombra-padrao); /* Adicionando sombra ao body */
 }
 
 * {
@@ -60,18 +67,24 @@ body {
     margin: 2rem;
     flex: 1 1 300px;
     min-width: 300px;
+    background-color: var(--branco-principal); /* Adicionando fundo branco às caixas */
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-padrao);
+    padding: 1.5rem;
 }
 
 .container_titulo {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #2d3748;
+    color: var(--cinza-escuro); /* Alterando cor do título */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adicionando sombra ao título */
 }
 
 .eco-wood-title {
     color: var(--verde-escuro);
     font-size: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Adicionando sombra ao título Eco-Wood */
 }
 
 .container_imagem {
@@ -80,6 +93,11 @@ body {
     margin: 1.5rem 0;
     border-radius: var(--borda-arredondada);
     box-shadow: var(--sombra-padrao);
+    transition: transform 0.3s ease-in-out; /* Adicionando transição para a imagem */
+}
+
+.container_imagem:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
 .rounded-image {
@@ -99,11 +117,13 @@ body {
     box-shadow: var(--sombra-padrao);
     text-align: center;
     font-size: 1.1rem;
+    border: none; /* Removendo a borda padrão do botão */
 }
 
 .container_botao:hover {
     background-color: var(--botao-azul-hover);
     transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Aumentando a sombra no hover */
 }
 
 .botao-verde {
@@ -131,10 +151,12 @@ body {
     font-size: 0.875rem;
     color: var(--cinza-secundario);
     margin-top: 1rem;
+    font-style: italic; /* Adicionando itálico ao aviso */
 }
 
 .texto-pequeno {
     font-size: 0.75rem;
+    color: var(--cinza-medio); /* Alterando cor do texto pequeno */
 }
 
 .secundario {
@@ -146,6 +168,7 @@ body {
     padding: 2rem;
     border-radius: var(--borda-arredondada);
     background-color: var(--cor-de-fundo-claro);
+    box-shadow: var(--sombra-padrao);
 }
 
 .secundario__imagem {
@@ -155,6 +178,11 @@ body {
     box-shadow: var(--sombra-padrao);
     flex: 1 1 400px;
     min-width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.secundario__imagem:hover {
+    transform: scale(1.03);
 }
 
 .container__descricao {
@@ -166,186 +194,5 @@ body {
 .descricao__titulo {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.verde-escuro {
-    color: var(--verde-escuro);
-}
-
-.descricao__texto {
-    color: var(--cinza-medio);
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-}
-
-.cinza-medio {
-    color: var(--cinza-medio);
-}
-
-.secundario__botao {
-    display: inline-block;
-    margin-top: 1rem;
-}
-
-.dispositivos {
-    text-align: center;
-    padding: 2rem;
-}
-
-.dispositivos_titulo {
-    font-size: 2.5rem;
-    color: #2d3748;
-    margin-bottom: 2rem;
-}
-
-.dispositivos_lista {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-}
-
-.lista_item {
-    font-size: 1.5rem;
-    color: var(--verde-escuro);
-    margin: 0 1rem;
-    flex: 0 1 auto;
-}
-
-.lista_item:before {
-    content: '•';
-    margin-right: 0.5rem;
-}
-
-.rodape {
-    text-align: center;
-    padding: 3rem;
-    margin-top: 4rem;
-    border-top: 1px solid #e2e8f0;
-}
-
-.bg-verde-claro {
-    background-color: var(--verde-claro);
-}
-
-.rodape_logo img {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 1rem;
-}
-
-.rodape_lista {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-}
-
-.lista_link a {
-    text-decoration: none;
-    color: var(--verde-escuro);
-    margin: 0.5rem 1rem;
-    font-weight: 500;
-    transition: var(--transicao-padrao);
-}
-
-.link-verde {
-    color: var(--verde-escuro);
-}
-
-.lista_link a:hover {
-    color: var(--botao-azul-hover);
-    transform: translateY(-2px);
-}
-
-.rodape_texto {
-    margin: 1rem 0;
     color: var(--cinza-escuro);
-    font-size: 0.875rem;
-}
-
-.cinza-escuro {
-    color: var(--cinza-escuro);
-}
-
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .container__caixa,
-    .secundario__imagem,
-    .container__descricao {
-        width: 100%;
-        margin: 1rem 0;
-        padding: 1rem;
-    }
-
-    .container_titulo,
-    .dispositivos_titulo {
-        font-size: 2rem;
-    }
-
-    .dispositivos_lista {
-        flex-direction: column;
-    }
-
-    .lista_item {
-        margin: 0.5rem 0;
-    }
-
-    .secundario {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .secundario__imagem {
-        margin-bottom: 1rem;
-    }
-}
-
-table {
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-th,
-td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: #f0f0f0;
-    color: #333;
-    font-weight: 600;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-a {
-    color: #0078d7;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
+    margin-bottom: 1rem;
