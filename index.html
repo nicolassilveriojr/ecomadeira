@@ -1,93 +1,315 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Madeira</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Meu Site Bonito</title>
+   <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --branco-principal: #ffffff;
+            --cinza-secundario: #b3b3b3;  /* Cor mais clara para o cinza */
+            --botao-azul: #6366f1;        /* Um tom de azul mais moderno */
+            --botao-azul-hover: #d946ef;  /* Um tom de roxo para o hover - mais interessante */
+            --cor-de-fundo: #f3f4f6;      /* Fundo bem claro */
+            --fonte-principal: 'Inter', sans-serif;
+            --sombra-padrao: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);  /* Sombra mais suave */
+            --transicao-padrao: all 0.3s ease;  /* Transições suaves */
+            --borda-arredondada: 0.5rem;
+        }
+
+        body {
+            background-color: var(--cor-de-fundo);
+            color: #1f2937;  /* Texto mais escuro para melhor contraste */
+            font-family: var(--fonte-principal);
+            font-size: 1rem;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7; /* Aumentei o line-height para melhorar a legibilidade do texto*/
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;  /* Para que padding e border não alterem o tamanho dos elementos */
+        }
+
+        .principal {
+            /* background-image: url("ecomadeira.jpg");  Comentei, pois pode ser problemático carregar */
+            background-repeat: no-repeat;
+            background-size: cover;  /* Para cobrir todo o espaço */
+            background-position: center; /* Centraliza a imagem */
+            align-items: center;
+            text-align: center;
+            padding: 4rem 0; /* Adicionei padding vertical */
+        }
+
+        .container {
+            max-width: 1200px;  /* Limita a largura do conteúdo para telas grandes */
+            margin: 0 auto;    /* Centraliza o container na página */
+            display: flex;
+            flex-wrap: wrap;  /* Permite que os elementos se quebrem em telas menores */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center;    /* Centraliza verticalmente */
+            padding: 2rem;
+        }
+
+        .container__caixa {
+            margin: 2rem;
+            flex: 1 1 300px;  /* Permite que cresça e encolha, com base de 300px */
+            min-width: 300px;  /* Impede que fique muito estreito */
+        }
+
+        .container_titulo {
+            font-size: 2.25rem;  /* Tamanho maior */
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2d3748;  /* Cor de texto mais escura */
+        }
+
+        .container_imagem {
+            max-width: 100%;  /* Garante que a imagem não ultrapasse o container */
+            height: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--borda-arredondada);  /* Usa a variável para arredondar a borda */
+            box-shadow: var(--sombra-padrao);      /* Adiciona sombra */
+        }
+
+        .container_botao {
+            background-color: var(--botao-azul);
+            border-radius: var(--borda-arredondada);
+            padding: 1rem 2rem;  /* Padding horizontal maior */
+            color: var(--branco-principal);
+            display: inline-block;  /* Para poder usar margin e padding corretamente */
+            text-decoration: none;
+            margin-bottom: 1rem;
+            transition: var(--transicao-padrao);  /* Transição suave */
+            font-weight: 600;  /* Negrito */
+            box-shadow: var(--sombra-padrao);
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .container_botao:hover {
+            background-color: var(--botao-azul-hover);  /* Cor de hover */
+            transform: translateY(-2px);  /* Levemente para cima no hover */
+        }
+
+        .botao_secundario {
+            background-color: transparent;
+            border: 2px solid var(--botao-azul);  /* Mesma cor da borda do botão principal */
+            color: var(--botao-azul);          /* Mesma cor do texto */
+        }
+
+        .botao_secundario:hover {
+            background-color: rgba(99, 102, 241, 0.1); /* Fundo suave no hover */
+            color: var(--botao-azul);  /* Mantém a cor do texto */
+            transform: translateY(-2px);
+        }
+
+        .container_aviso {
+            font-size: 0.875rem;  /* Tamanho menor */
+            color: var(--cinza-secundario);
+            margin-top: 1rem;
+        }
+
+        .secundario {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;  /* Centraliza os elementos horizontalmente */
+            align-items: center;    /* Alinha verticalmente */
+            margin: 2rem 0;
+            padding: 2rem;
+            /* background-color: #f9fafb;  Ton de fundo muito suave, se necessário */
+            border-radius: var(--borda-arredondada);
+        }
+
+        .secundario__imagem {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--borda-arredondada);
+            box-shadow: var(--sombra-padrao);
+            flex: 1 1 400px;  /* Permite crescer e encolher */
+            min-width: 300px;
+        }
+
+        .container__descricao {
+            padding: 2rem;
+            flex: 1 1 400px;
+            min-width: 300px;
+        }
+
+        .descricao__titulo {
+            font-size: 3rem;  /* Tamanho maior */
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            line-height: 1.2;  /* Melhora o espaçamento entre linhas em títulos longos*/
+        }
+
+        .descricao__texto {
+            color: var(--cinza-secundario);
+            font-size: 1.1rem;  /* Aumenta um pouco o tamanho da fonte */
+            margin-bottom: 1.5rem;
+        }
+
+        .secundario__botao {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .dispositivos {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .dispositivos_titulo {
+            font-size: 3rem;
+            color: #2d3748;
+            margin-bottom: 2rem;
+        }
+
+        .dispositivos_lista {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;  /* Remove os marcadores de lista padrão */
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .lista_item {
+            font-size: 1.5rem;
+            color: var(--botao-azul);  /* Cor de destaque */
+            margin: 0 1rem;
+            flex: 0 1 auto; /* Não cresce, mas encolhe se necessário */
+        }
+
+        .lista_item:before {
+            content: '•'; /* Adiciona um marcador personalizado */
+            margin-right: 0.5rem;
+        }
+
+        .rodape {
+            text-align: center;
+            padding: 3rem;
+            margin-top: 4rem;
+            border-top: 1px solid #e2e8f0;  /* Borda superior suave */
+        }
+
+        .rodape_lista {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .lista_link a {
+            text-decoration: none;
+            color: var(--botao-azul);  /* Mantém a cor azul */
+            margin: 0.5rem 1rem;
+            font-weight: 500;  /* Negrito nos links do rodapé */
+            transition: var(--transicao-padrao);
+        }
+
+        .lista_link a:hover {
+            color: var(--botao-azul-hover);
+            transform: translateY(-2px);
+        }
+
+        .rodape_texto {
+            margin: 1rem 0;
+            color: var(--cinza-secundario);
+            font-size: 0.875rem;
+        }
+
+        .rodape_logo img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        /* Estilos para telas menores (mobile) */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;  /* Uma coluna em telas pequenas */
+            }
+
+            .container__caixa,
+            .secundario__imagem,
+            .container__descricao {
+                width: 100%;
+                margin: 1rem 0;
+                padding: 1rem;
+            }
+
+            .container_titulo,
+            .dispositivos_titulo {
+                font-size: 2.5rem;  /* Tamanho de fonte menor em telas pequenas */
+            }
+
+            .dispositivos_lista {
+                flex-direction: column;  /* Lista vertical em telas pequenas */
+            }
+
+            .lista_item {
+                margin: 0.5rem 0;
+            }
+
+            .secundario {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .secundario__imagem {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-<body>
-    <section class="principal container">
-        <div class="container__caixa">
-            <H1 class="container__titulo ">
-                Bem vindo ao nosso ECO_WOOD.
-            </H1>
-            <img src="" alt="madeiras" class="container__imagem">
-            <a href="www.ecowood.com.br" class="container__botao"> todas as nossas madeiras sao reutilizavel* </a>
-            <a href="www.ecowood.com.br" class="container__botao botao__secundario">compre ja </a>
-            <p class="container__aviso"> *O preco pode variar caso a assinatura seja feita em outros planos. </p>
+    <header class="principal">
+        <div class="container">
+            <div class="container__caixa">
+                <h1 class="container_titulo">Título Principal do Site</h1>
+                <img src="placeholder-image.jpg" alt="Imagem Principal" class="container_imagem">
+                <a href="#" class="container_botao">Nosso Botão Azul</a>
+                <a href="#" class="container_botao botao_secundario">Botão Secundário</a>
+                <p class="container_aviso">Texto de Aviso Importante</p>
+            </div>
         </div>
-    </section>
- <section class="container secundario">
+    </header>
+
+    <section class="secundario">
+        <img src="placeholder-image2.jpg" alt="Imagem Secundária" class="secundario__imagem">
         <div class="container__descricao">
-            <p class="descricao__texto">
-               A melhor madeira reutilizavel.
-            </p>
-            <a href="www.ecomadeiras.com.br" class="container__botao secundario__botao" container>faca seu pedido nao perca tempo</a>
+            <h2 class="descricao__titulo">Nosso Título Secundário</h2>
+            <p class="descricao__texto">Descrição detalhada sobre o conteúdo desta seção. Pode ser um texto mais longo para explicar os benefícios ou características do produto/serviço.</p>
+            <a href="#" class="container_botao secundario__botao">Botão da Seção</a>
         </div>
-        <img src="download.jpg" alt="Tela do alura+ e alura lingua" class="secundario__imagem">
     </section>
 
-        <section class="container secundario "> <!--3-->
-        <img src="madeiras 2.jpg" alt="madeiras jogada fora">
-        <div class="container__descricao">
-            <h2 class="descricao__texto">Baixe seus cursos </h2>
-            <p class="descricao__texto">
-             com o alto gasto de madeiras por dia que sao gasto em construcoes com essas madeiras podemos fazer mais construcoes e diversos objetos e itens como mesas, banco e por ai vai  </p>
-        </div>
+    <section class="dispositivos">
+        <h2 class="dispositivos_titulo">Dispositivos Compatíveis</h2>
+        <ul class="dispositivos_lista">
+            <li class="lista_item">Smartphone</li>
+            <li class="lista_item">Tablet</li>
+            <li class="lista_item">Computador</li>
+            <li class="lista_item">Smart TV</li>
+        </ul>
     </section>
-     <section class="dispositivos">
-        <h2 class="dispositivos__titulo">
-           Nosso app/site funcionara nos seus dispositivos favoritos 
-        </h2>
-        <ul class="dispositivo__lista">
-            <li>
-                <img src="computador.png" alt="icone de computador">
-                <h3 class="lista__item">Computador</h3>
-            </li>
-            <li>
-                <img src="celular.png" alt="icone de celular">
-                <h3 class="lista__item">Celular</h3>
-            </li>
-        </ul>
-        </section>
 
- <footer class="rodape">
-        <img src="pica pau picando a madeira logo.jpg" alt="nick" class="rodape__logo">
-        <img src="pica pau picando a madeira logo.jpg" alt="nick" sizes="80px" srcset="">
-        <ul class="rodape__lista">
-            <li class="lista__link">
-                <a href="#">Idioma</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Dispositivos compativeis</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Contrato de assinatura</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Politica de privacidade</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Protecao de dados no Brasil</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Anuncios personalizados</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Ajuda</a>
-            </li>
+    <footer class="rodape">
+        <div class="rodape_logo">
+            <img src="logo-placeholder.png" alt="Logo da Empresa">
+        </div>
+        <ul class="rodape_lista">
+            <li class="lista_link"><a href="#">Idioma</a></li>
+            <li class="lista_link"><a href="#">Dispositivos</a></li>
+            <li class="lista_link"><a href="#">Política de Privacidade</a></li>
+            <li class="lista_link"><a href="#">Ajuda</a></li>
         </ul>
-        <p class="rodape__texto">Todos os direitos reservados. Servico por assinatura com base em principios sustentaveis. Utilizamos materiais reutilizados, como madeiras de reflorestamento e eco wood, em nossos ambientes e conteúdos, sempre sujeitos à disponibilidade.</p>
-        <p class="rodape__texto">ECO_WOOD e um servico pago, baseado em assinatura e sujeito a termos e condicoes. O
-            servico ECO_WOOD e comercializado por nossos Sistemas de Informatica S.I, Rua das Palmeiras, 1234 – Bairro Verde, Floralia – FG, 12345-678, Brasil
- 12.345.678/0001-90</p>
+        <p class="rodape_texto">Texto do rodapé com informações de direitos autorais, etc.</p>
     </footer>
-
-
 </body>
-
 </html>
