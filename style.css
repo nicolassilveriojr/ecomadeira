@@ -5,7 +5,7 @@
     --cinza-escuro: #374151;
     --botao-azul: #6366f1;
     --botao-azul-hover: #d946ef;
-    --cor-de-fundo: #f5f5dc;
+    --cor-de-fundo: #c4ffcc;
     --cor-de-fundo-claro: #f5f5dc;
     --fonte-principal: 'Inter', sans-serif;
     --sombra-padrao: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -196,4 +196,84 @@ body {
     font-weight: 700;
     color: var(--cinza-escuro);
     margin-bottom: 1rem;
+}
+
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #f0f8f0; /* Cor de fundo suave, similar à imagem */
+margin: 0;
+}
+
+.container {
+background-color: #ffffff;
+padding: 40px;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+max-width: 900px; /* Ajuste conforme necessário */
+width: 100%;
+}
+
+.main-title {
+color: #4CAF50; /* Cor verde do título */
+font-size: 2.5em;
+margin-bottom: 30px;
+}
+
+.image-container img {
+max-width: 100%;
+height: auto;
+border-radius: 5px;
+margin-bottom: 30px;
+}
+
+.buttons-container {
+display: flex;
+justify-content: center;
+gap: 20px; /* Espaço entre os botões */
+margin-bottom: 30px;
+}
+
+.button {
+display: inline-block;
+padding: 12px 25px;
+border-radius: 5px;
+text-decoration: none;
+font-weight: bold;
+transition: background-color 0.3s ease;
+white-space: nowrap; /* Evita que o texto quebre */
+}
+
+.primary-button {
+background-color: #8BC34A; /* Verde mais claro para o botão principal */
+color: white;
+}
+
+.primary-button:hover {
+background-color: #7CB342;
+}
+
+.secondary-button {
+background-color: #f0f0f0; /* Fundo cinza claro */
+color: #333;
+border: 1px solid #ccc;
+}
+
+.secondary-button:hover {
+.login-button {
+background-color: #2196F3;
+color: white;
+}
+
+.login-button:hover {
+background-color: #1976D2;
+}
+
+.sustainability-text {
+color: #666;
+font-size: 0.9em;
 }
