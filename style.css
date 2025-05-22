@@ -54,7 +54,7 @@ body {
 }
 
 .container__caixa {
-    max-width: 800px;
+    max-width: 900px; /* Aumentado para permitir que a imagem principal seja maior */
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
