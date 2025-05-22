@@ -108,6 +108,11 @@ body {
     gap: 50px;
 }
 
+.secundario .secundario__imagem {
+    max-width: 450px;
+    flex-shrink: 0;
+}
+
 .container__descricao {
     text-align: left;
     max-width: 500px;
@@ -265,6 +270,10 @@ body {
         gap: 30px;
     }
 
+    .secundario .secundario__imagem {
+        max-width: 100%;
+    }
+
     .container__descricao {
         text-align: center;
     }
@@ -329,6 +338,10 @@ body {
     .secundario {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .secundario .secundario__imagem {
+        max-width: 100%;
     }
 
     .container__descricao {
