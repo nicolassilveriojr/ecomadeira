@@ -1,0 +1,74 @@
+<style>
+  .quiz-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #eef5f0;
+    border-radius: 12px;
+    font-family: sans-serif;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .quiz-container h2 {
+    text-align: center;
+    color: #2f4f4f;
+  }
+
+  .quiz-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .quiz-container label {
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .quiz-container label:hover {
+    background: #388e3c;
+  }
+
+  .result {
+    display: none;
+    padding: 15px;
+    margin-top: 20px;
+    background: #dcedc8;
+    border-radius: 8px;
+    color: #33691e;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  #opcao1:checked ~ .resultado1,
+  #opcao2:checked ~ .resultado2,
+  #opcao3:checked ~ .resultado3 {
+    display: block;
+  }
+</style>
+
+<div class="quiz-container">
+  <h2>Qual madeira ecológica combina com você?</h2>
+
+  <form>
+    <input type="radio" id="opcao1" name="quiz">
+    <label for="opcao1">Quero algo rústico e resistente</label>
+
+    <input type="radio" id="opcao2" name="quiz">
+    <label for="opcao2">Prefiro algo moderno e leve</label>
+
+    <input type="radio" id="opcao3" name="quiz">
+    <label for="opcao3">Busco custo-benefício e versatilidade</label>
+
+    <div class="result resultado1">🌲 Indicamos <strong>Madeira de Demolição</strong>: ideal para ambientes rústicos e sustentáveis.</div>
+    <div class="result resultado2">🌿 Indicamos <strong>MDF Ecológico</strong>: ótimo para móveis modernos e leves.</div>
+    <div class="result resultado3">🪵 Indicamos <strong>Compensado Ecológico</strong>: ótimo custo-benefício e resistente.</div>
+  </form>
+</div>
