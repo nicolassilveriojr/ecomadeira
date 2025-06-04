@@ -21,8 +21,7 @@ body {
 }
 
 h1 {
-    color: #2e8b57;
-    /* Um verde associado à natureza */
+    color: #2e8b57; /* Um verde associado à natureza */
     text-align: center;
     margin-bottom: 20px;
 }
@@ -47,20 +46,9 @@ h2 {
     margin-bottom: 25px;
 }
 
-.quiz-section ul {
-    list-style: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-
-.quiz-section ul li {
-    margin-bottom: 8px;
-}
-
 /* Perguntas e Opções */
 .question-block {
-    background-color: #e6f7ee;
-    /* Um verde claro para destacar a pergunta */
+    background-color: #e6f7ee; /* Um verde claro para destacar a pergunta */
     border: 1px solid #c9e8d7;
     border-radius: 5px;
     padding: 15px;
@@ -75,62 +63,48 @@ h2 {
     color: #2e8b57;
 }
 
-.options p {
-    margin: 8px 0;
-    padding: 4px 0;
-    color: #444;
+.options {
+    display: flex; /* Para que os botões fiquem lado a lado se houver espaço */
+    flex-wrap: wrap; /* Quebra para a próxima linha se não houver espaço */
+    gap: 10px; /* Espaçamento entre os "botões" */
 }
 
-/* Esconde o checkbox real */
-.toggle-answer {
+/* Esconde o input radio real */
+.options input[type="radio"] {
     display: none;
 }
 
-/* Estilo do botão "Mostrar Resposta" (que é um label) */
-.show-answer-button {
-    display: inline-block;
-    /* Faz com que o label se comporte como um botão */
-    padding: 10px 15px;
-    background-color: #2e8b57;
-    /* Cor do botão */
-    color: white;
-    border: none;
+/* Estiliza o label (que será o nosso botão) */
+.option-button {
+    flex: 1 1 45%; /* Permite que o botão ocupe quase metade da largura do container, quebrando linha se necessário */
+    padding: 12px 15px;
+    background-color: #f0f0f0; /* Cor padrão do botão */
+    color: #333;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 0.95em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    /* Espaço entre o botão e a resposta */
+    text-align: center;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    font-size: 0.95em;
 }
 
-.show-answer-button:hover {
-    background-color: #216a42;
-    /* Cor mais escura ao passar o mouse */
+/* Efeito hover para os botões */
+.option-button:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
 }
 
-/* Esconde a resposta correta por padrão */
-.correct-answer {
-    display: none;
-    /* Escondido por padrão */
-    background-color: #dff0d8;
-    /* Cor de fundo para a resposta */
-    border: 1px solid #c3e6cb;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 4px;
-    color: #1a6435;
-    font-weight: bold;
+/* Estilo para a opção selecionada */
+.options input[type="radio"]:checked + .option-button {
+    background-color: #2e8b57; /* Cor de fundo verde quando selecionado */
+    color: white; /* Texto branco quando selecionado */
+    border-color: #216a42; /* Borda mais escura quando selecionado */
+    box-shadow: 0 0 5px rgba(46, 139, 87, 0.5); /* Sombra suave para destacar */
 }
 
-/* Mostra a resposta correta quando o checkbox associado é marcado */
-.toggle-answer:checked~.correct-answer {
-    display: block;
-    /* Revela a resposta */
-}
-
-/* Opcional: Altera o texto do botão quando a resposta é mostrada */
-.toggle-answer:checked+.show-answer-button::before {
-    content: "Ocultar Resposta";
-    /* Altera o texto do botão */
+/* Ajustes para telas menores (responsividade) */
+@media (max-width: 600px) {
+    .option-button {
+        flex: 1 1 100%; /* Botões ocupam a largura total em telas pequenas */
+    }
 }

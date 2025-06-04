@@ -3,21 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Eco-Wood (Interativo CSS)</title>
+    <title>Quiz Eco-Wood (Seleção por Botão)</title>
     <link rel="stylesheet" href="quizzis.css">
 </head>
 <body>
     <div class="quiz-container">
         <h1>Conhecendo a Eco-Wood!</h1>
-        <p class="instructions">Bem-vindo(a) ao quiz da Eco-Wood! Teste seus conhecimentos sobre a nossa empresa e nosso compromisso com a sustentabilidade.</p>
-
-        <div class="quiz-section">
-            <h2>Instruções:</h2>
-            <ul>
-                <li>Leia atentamente cada pergunta.</li>
-                <li>Clique no botão "Mostrar Resposta" para revelar a opção correta.</li>
-            </ul>
-        </div>
+        <p class="instructions">Bem-vindo(a) ao quiz da Eco-Wood! Selecione uma opção para cada pergunta.</p>
 
         <div class="quiz-section">
             <h2>Perguntas:</h2>
@@ -25,60 +17,68 @@
             <div class="question-block">
                 <p class="question-text">1. Qual é o principal foco dos produtos oferecidos pela Eco-Wood?</p>
                 <div class="options">
-                    <p>a) Madeira importada de luxo</p>
-                    <p>b) Madeira de reflorestamento e sustentabilidade</p>
-                    <p>c) Plástico reciclado</p>
-                    <p>d) Metais preciosos</p>
-                </div>
-                <input type="checkbox" id="toggle-q1" class="toggle-answer">
-                <label for="toggle-q1" class="show-answer-button">Mostrar Resposta</label>
-                <div class="correct-answer">
-                    <p>Resposta Correta: **b) Madeira de reflorestamento e sustentabilidade**</p>
+                    <input type="radio" id="q1_a" name="q1" value="a">
+                    <label for="q1_a" class="option-button">a) Madeira importada de luxo</label>
+
+                    <input type="radio" id="q1_b" name="q1" value="b">
+                    <label for="q1_b" class="option-button">b) Madeira de reflorestamento e sustentabilidade</label>
+
+                    <input type="radio" id="q1_c" name="q1" value="c">
+                    <label for="q1_c" class="option-button">c) Plástico reciclado</label>
+
+                    <input type="radio" id="q1_d" name="q1" value="d">
+                    <label for="q1_d" class="option-button">d) Metais preciosos</label>
                 </div>
             </div>
 
             <div class="question-block">
                 <p class="question-text">2. O que a Eco-Wood busca combinar em seus produtos?</p>
                 <div class="options">
-                    <p>a) Preço baixo e quantidade</p>
-                    <p>b) Beleza natural e compromisso ambiental</p>
-                    <p>c) Produção rápida e materiais sintéticos</p>
-                    <p>d) Design moderno e tecnologia avançada</p>
-                </div>
-                <input type="checkbox" id="toggle-q2" class="toggle-answer">
-                <label for="toggle-q2" class="show-answer-button">Mostrar Resposta</label>
-                <div class="correct-answer">
-                    <p>Resposta Correta: **b) Beleza natural e compromisso ambiental**</p>
+                    <input type="radio" id="q2_a" name="q2" value="a">
+                    <label for="q2_a" class="option-button">a) Preço baixo e quantidade</label>
+
+                    <input type="radio" id="q2_b" name="q2" value="b">
+                    <label for="q2_b" class="option-button">b) Beleza natural e compromisso ambiental</label>
+
+                    <input type="radio" id="q2_c" name="q2" value="c">
+                    <label for="q2_c" class="option-button">c) Produção rápida e materiais sintéticos</label>
+
+                    <input type="radio" id="q2_d" name="q2" value="d">
+                    <label for="q2_d" class="option-button">d) Design moderno e tecnologia avançada</label>
                 </div>
             </div>
 
             <div class="question-block">
                 <p class="question-text">3. Quais dispositivos são compatíveis com a visualização do site da Eco-Wood?</p>
                 <div class="options">
-                    <p>a) Apenas computadores</p>
-                    <p>b) Apenas smartphones</p>
-                    <p>c) Smartphones, tablets e computadores</p>
-                    <p>d) Apenas dispositivos Apple</p>
-                </div>
-                <input type="checkbox" id="toggle-q3" class="toggle-answer">
-                <label for="toggle-q3" class="show-answer-button">Mostrar Resposta</label>
-                <div class="correct-answer">
-                    <p>Resposta Correta: **c) Smartphones, tablets e computadores**</p>
+                    <input type="radio" id="q3_a" name="q3" value="a">
+                    <label for="q3_a" class="option-button">a) Apenas computadores</label>
+
+                    <input type="radio" id="q3_b" name="q3" value="b">
+                    <label for="q3_b" class="option-button">b) Apenas smartphones</label>
+
+                    <input type="radio" id="q3_c" name="q3" value="c">
+                    <label for="q3_c" class="option-button">c) Smartphones, tablets e computadores</label>
+
+                    <input type="radio" id="q3_d" name="q3" value="d">
+                    <label for="q3_d" class="option-button">d) Apenas dispositivos Apple</label>
                 </div>
             </div>
 
             <div class="question-block">
                 <p class="question-text">4. A Eco-Wood destaca que seus produtos são feitos com qual tipo de madeira?</p>
                 <div class="options">
-                    <p>a) Madeira de demolição</p>
-                    <p>b) Madeira nobre de corte ilegal</p>
-                    c) Madeira de reflorestamento</p>
-                    <p>d) Madeira compensada</p>
-                </div>
-                <input type="checkbox" id="toggle-q4" class="toggle-answer">
-                <label for="toggle-q4" class="show-answer-button">Mostrar Resposta</label>
-                <div class="correct-answer">
-                    <p>Resposta Correta: **c) Madeira de reflorestamento**</p>
+                    <input type="radio" id="q4_a" name="q4" value="a">
+                    <label for="q4_a" class="option-button">a) Madeira de demolição</label>
+
+                    <input type="radio" id="q4_b" name="q4" value="b">
+                    <label for="q4_b" class="option-button">b) Madeira nobre de corte ilegal</label>
+
+                    <input type="radio" id="q4_c" name="q4" value="c">
+                    <label for="q4_c" class="option-button">c) Madeira de reflorestamento</label>
+
+                    <input type="radio" id="q4_d" name="q4" value="d">
+                    <label for="q4_d" class="option-button">d) Madeira compensada</label>
                 </div>
             </div>
         </div>
