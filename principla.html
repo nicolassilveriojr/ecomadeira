@@ -7,10 +7,21 @@
     <title>Eco-Wood</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Biblioteca AOS para animações -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <section class="principal">
+    <!-- Navbar Fixa -->
+    <nav class="navbar sticky">
+        <a href="#home">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section class="principal" id="home">
         <div class="container__caixa">
             <h1 class="main-section-title">Eco-Wood</h1>
             <img src="ecomadeira.jpg" alt="Imagem Principal da Eco-Wood" class="container_imagem rounded-image">
@@ -21,7 +32,7 @@
     </section>
 
     <main>
-        <section class="main-section secundario">
+        <section class="main-section secundario" id="produtos" data-aos="fade-up">
             <img src="nicolas neto.jpg" alt="Imagem de Produtos Eco-Wood" class="secundario__imagem rounded-image">
             <div class="container__descricao">
                 <h2 class="main-section-title">Faça a diferença com estilo:</h2>
@@ -33,7 +44,7 @@
             </div>
         </section>
 
-        <section class="main-section dispositivos">
+        <section class="main-section dispositivos" data-aos="fade-right">
             <h2 class="main-section-title">Dispositivos Compatíveis</h2>
             <ul class="dispositivos_lista">
                 <li class="lista_item">Smartphone</li>
@@ -41,9 +52,31 @@
                 <li class="lista_item">Computador</li>
             </ul>
         </section>
+
+        <!-- Galeria de Produtos -->
+        <section class="galeria-produtos" data-aos="zoom-in">
+            <h2 class="main-section-title">Nossos Produtos</h2>
+            <div class="produtos-grid">
+                <div class="produto-item">
+                    <img src="madeira1.jpg" alt="Madeira Ipê">
+                    <h3>Madeira Ipê</h3>
+                    <p>Ideal para decks e ambientes externos.</p>
+                </div>
+                <div class="produto-item">
+                    <img src="madeira2.jpg" alt="Madeira Cedro">
+                    <h3>Madeira Cedro</h3>
+                    <p>Excelente para móveis finos e acabamento.</p>
+                </div>
+                <div class="produto-item">
+                    <img src="madeira3.jpg" alt="Madeira Pinus">
+                    <h3>Madeira Pinus</h3>
+                    <p>Opção sustentável e versátil para construções.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <section class="avaliacoes-clientes">
+    <section class="avaliacoes-clientes" id="depoimentos">
         <h2>O que nossos clientes dizem sobre a Eco-Madeira</h2>
         <div class="container-avaliacoes">
             <div class="avaliacao-item">
@@ -81,10 +114,21 @@
                 <p>"Comprei sem medo! Site seguro e produtos que fazem a diferença."</p>
                 <span>- Carla G.</span>
             </div>
-                
+        </div>
     </section>
 
-        <footer class="rodape">
+    <!-- Formulário de Contato -->
+    <section class="contato" id="contato" data-aos="fade-up">
+        <h2 class="main-section-title">Entre em Contato</h2>
+        <form class="form-contato">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <textarea placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="rodape">
         <div class="footer-logo">
             <img src="logo.png" alt="Logo da Empresa Eco-Wood">
         </div>
@@ -97,11 +141,15 @@
         <p class="footer-copyright">Eco-Wood © 2024. Todos os direitos reservados.</p>
     </footer>
 
-
-    <!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
+    <!-- Elfsight AI Chatbot -->
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <div class="elfsight-app-7c5bfc3a-d308-4741-857c-aa4bf73d09f9" data-elfsight-app-lazy></div>
 
+    <!-- AOS Scroll Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
