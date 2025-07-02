@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 20px;
-    background-color: #f4f4f4;
+    background-color: #131010;
     color: #333;
 }
 
@@ -25,7 +25,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 0px 30px rgba(0,0,0,0.1);
     background-color: #fff;
 }
 
