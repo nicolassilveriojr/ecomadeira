@@ -1,47 +1,66 @@
+/* Estilos aprimorados para a tabela */
 .products-table {
   max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #f7fff5;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff; /* Fundo branco para um visual mais clean */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Arial, sans-serif; /* Fonte mais moderna */
   text-align: center;
 }
 
 .products-table h2 {
-  font-size: 2em;
-  color: #4CAF50;
-  margin-bottom: 20px;
-  font-weight: bold;
+  font-size: 2.2em;
+  color: #2e7d32; /* Verde escuro e elegante */
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .products-table table {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.products-table th, .products-table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* Espaço entre as linhas */
 }
 
 .products-table th {
   background-color: #e8f5e9;
-  color: #333;
-  font-weight: bold;
+  color: #4CAF50;
+  font-weight: 700;
+  padding: 15px;
+  text-align: left;
+  border: none;
+  border-radius: 8px 8px 0 0; /* Borda arredondada no topo */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9em;
 }
 
-.products-table tr:hover {
+.products-table td {
+  background-color: #f9fdf8;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0; /* Linha sutil para separar */
+}
+
+.products-table tbody tr {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.products-table tbody tr:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
   background-color: #f1f8e9;
 }
 
-.products-table td strong {
-  color: #555;
+.products-table td:first-child {
+  font-weight: bold;
+  color: #388e3c;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
+.products-table tbody tr:last-child td {
+  border-bottom: none;
 }
