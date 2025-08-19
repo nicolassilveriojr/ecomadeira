@@ -1,18 +1,59 @@
-/* Estilos aprimorados para a tabela */
+body {
+  margin: 0;
+  padding-top: 80px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  background-color: #f7fff5;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #e8f5e9;
+  padding: 15px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #2e7d32;
+}
+
 .products-table {
   max-width: 900px;
   margin: 60px auto;
   padding: 30px;
-  background-color: #ffffff; /* Fundo branco para um visual mais clean */
+  background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  font-family: 'Segoe UI', Arial, sans-serif; /* Fonte mais moderna */
   text-align: center;
 }
 
 .products-table h2 {
   font-size: 2.2em;
-  color: #2e7d32; /* Verde escuro e elegante */
+  color: #2e7d32;
   margin-bottom: 30px;
   font-weight: 600;
   letter-spacing: -0.5px;
@@ -21,7 +62,7 @@
 .products-table table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 10px; /* Espaço entre as linhas */
+  border-spacing: 0 10px;
 }
 
 .products-table th {
@@ -31,7 +72,7 @@
   padding: 15px;
   text-align: left;
   border: none;
-  border-radius: 8px 8px 0 0; /* Borda arredondada no topo */
+  border-radius: 8px 8px 0 0;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.9em;
@@ -41,7 +82,7 @@
   background-color: #f9fdf8;
   padding: 15px;
   text-align: left;
-  border-bottom: 1px solid #e0e0e0; /* Linha sutil para separar */
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .products-table tbody tr {
