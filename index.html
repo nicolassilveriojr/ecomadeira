@@ -8,13 +8,13 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #6f7ee6, #28a745);
+      background: linear-gradient(135deg, #6f7ee6, #4d5fa9);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      color: white; /* Cor branca para o texto */
+      color: white;
     }
     .login-container {
       background: rgba(255, 255, 255, 0.9);
@@ -48,13 +48,13 @@
       transition: all 0.3s ease;
     }
     .input-group input:focus {
-      border-color: #28a745;
+      border-color: #4d5fa9;
       outline: none;
     }
     button {
       width: 100%;
       padding: 14px;
-      background-color: #28a745;
+      background-color: #4d5fa9;
       border: none;
       color: white;
       font-weight: bold;
@@ -62,9 +62,10 @@
       border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      text-align: center;
     }
     button:hover {
-      background-color: #28a745;
+      background-color: #3b4b8b;
     }
     .error-message {
       color: red;
@@ -84,7 +85,7 @@
   </style>
 </head>
 <body>
-  <div class="eco-wood">ECO-WOOD</div> <!-- Título "ECO-WOOD" adicionado -->
+  <div class="eco-wood">ECO-WOOD</div>
   <div class="login-container">
     <h2>Login</h2>
     <form id="loginForm" onsubmit="return validateForm()">
@@ -96,8 +97,9 @@
         <label for="password">Senha</label>
         <input type="password" id="password" name="password" placeholder="Digite sua senha" required />
       </div>
-      <a href="principla.html"><button type="submit" >Entrar</button></a>
-      
+      <a href="principla.html">
+        <button type="button">Entrar</button>
+      </a>
       <div id="error-message" class="error-message">Usuário ou senha inválidos.</div>
     </form>
   </div>
