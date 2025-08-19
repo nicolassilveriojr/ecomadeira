@@ -62,22 +62,49 @@
     button:hover {
       background-color: #0056b3;
     }
+    .error-message {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
   <div class="login-container">
     <h2>Login</h2>
-    <form action="principla.html">
+    <form id="loginForm" onsubmit="return validateForm()">
       <div class="input-group">
         <label for="username">Usuário</label>
-        <input type="text" id="username" name="username" placeholder="Digite seu usuário" required />
+        <input type="text" id="username" name="username" placeholder="Digite seu usuário" required aria-label="Usuário" />
       </div>
       <div class="input-group">
         <label for="password">Senha</label>
-        <input type="password" id="password" name="password" placeholder="Digite sua senha" required />
+        <input type="password" id="password" name="password" placeholder="Digite sua senha" required aria-label="Senha" />
       </div>
       <button type="submit">Entrar</button>
+      <div id="error-message" class="error-message" style="display:none;">
+        Usuário ou senha inválidos.
+      </div>
     </form>
   </div>
+
+  <script>
+    function validateForm() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      if (username === '' || password === '') {
+        return false; // Bloqueia o envio do formulário se estiver vazio
+      }
+
+      // Simulação de verificação (aqui você poderia validar com back-end)
+      if (username !== 'admin' || password !== '123456') {
+        document.getElementById('error-message').style.display = 'block';
+        return false; // Bloqueia o envio do formulário em caso de erro
+      }
+
+      return true; // Permite o envio do formulário
+    }
+  </script>
 </body>
 </html>
