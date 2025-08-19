@@ -14,6 +14,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      color: white; /* Cor branca para o texto */
     }
     .login-container {
       background: rgba(255, 255, 255, 0.9);
@@ -71,9 +72,19 @@
       margin-top: 10px;
       display: none;
     }
+    .eco-wood {
+      position: absolute;
+      top: 20%;
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
 <body>
+  <div class="eco-wood">ECO-WOOD</div> <!-- Título "ECO-WOOD" adicionado -->
   <div class="login-container">
     <h2>Login</h2>
     <form id="loginForm" onsubmit="return validateForm()">
