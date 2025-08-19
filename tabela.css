@@ -1,19 +1,22 @@
 body {
   margin: 0;
   padding-top: 80px;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif; /* Fonte moderna e elegante */
   color: #333;
-  background-color: #f7fff5;
+  background-color: #f0f8f0; /* Um verde claro e suave para o fundo */
+  line-height: 1.6;
 }
 
+/* Estilos para a barra de navegação fixa */
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  background-color: #e8f5e9;
-  padding: 15px 0;
+  background-color: #ffffff; /* Fundo branco e limpo */
+  padding: 18px 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra mais suave e elegante */
   text-align: center;
 }
 
@@ -23,85 +26,131 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav-links li {
-  margin: 0 20px;
+  margin: 0 25px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #4CAF50;
-  font-weight: bold;
-  font-size: 1em;
+  color: #388e3c; /* Verde mais escuro para maior contraste */
+  font-weight: 600;
+  font-size: 1.05em;
+  position: relative;
   transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #66bb6a; /* Linha de destaque no hover */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #2e7d32;
 }
 
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Estilos aprimorados para a tabela */
 .products-table {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 30px;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 40px;
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 
 .products-table h2 {
-  font-size: 2.2em;
+  font-size: 2.8em;
   color: #2e7d32;
-  margin-bottom: 30px;
-  font-weight: 600;
-  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .products-table table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 10px;
+  border-spacing: 0 15px; /* Mais espaço entre as linhas */
 }
 
 .products-table th {
-  background-color: #e8f5e9;
-  color: #4CAF50;
+  background-color: #f7fdf7;
+  color: #66bb6a;
   font-weight: 700;
-  padding: 15px;
+  padding: 18px;
   text-align: left;
   border: none;
-  border-radius: 8px 8px 0 0;
+  border-bottom: 2px solid #e0e0e0; /* Linha mais grossa para o cabeçalho */
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9em;
+  letter-spacing: 1.5px;
+  font-size: 1em;
 }
 
 .products-table td {
-  background-color: #f9fdf8;
-  padding: 15px;
+  background-color: #ffffff;
+  padding: 20px;
   text-align: left;
-  border-bottom: 1px solid #e0e0e0;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  transition: all 0.3s ease;
 }
 
 .products-table tbody tr {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  cursor: pointer;
-  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .products-table tbody tr:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-  background-color: #f1f8e9;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f9fdf9;
 }
 
 .products-table td:first-child {
-  font-weight: bold;
+  font-weight: 700;
+  color: #388e3c;
+  font-size: 1.1em;
+}
+
+.products-table td:first-child strong {
   color: #388e3c;
 }
 
-.products-table tbody tr:last-child td {
-  border-bottom: none;
+.products-table tbody tr:first-child td {
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Ajuste para o botão voltar */
+a button {
+  display: block;
+  margin: 40px auto;
+  padding: 12px 30px;
+  background-color: #66bb6a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a button:hover {
+  background-color: #57995a;
+  transform: translateY(-2px);
 }
