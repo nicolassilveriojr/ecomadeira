@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tela de Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #6f7ee6, #4d5fa9);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,58 +16,60 @@
       margin: 0;
     }
     .login-container {
-      background: white;
-      padding: 30px 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 320px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px 50px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      width: 360px;
+      text-align: center;
     }
     .login-container h2 {
-      margin-bottom: 24px;
-      text-align: center;
+      margin-bottom: 20px;
       color: #333;
+      font-weight: 500;
     }
     .input-group {
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
     .input-group label {
       display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 14px;
       color: #555;
     }
     .input-group input {
       width: 100%;
-      padding: 10px 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 15px;
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
       box-sizing: border-box;
+      transition: all 0.3s ease;
     }
     .input-group input:focus {
-      border-color: #007bff;
+      border-color: #4d5fa9;
       outline: none;
     }
     button {
       width: 100%;
-      padding: 12px;
-      background-color: #007bff;
+      padding: 14px;
+      background-color: #4d5fa9;
       border: none;
       color: white;
       font-weight: bold;
       font-size: 16px;
-      border-radius: 4px;
+      border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
     button:hover {
-      background-color: #0056b3;
+      background-color: #3b4b8b;
     }
     .error-message {
       color: red;
       font-size: 14px;
-      text-align: center;
       margin-top: 10px;
+      display: none;
     }
   </style>
 </head>
@@ -76,16 +79,14 @@
     <form id="loginForm" onsubmit="return validateForm()">
       <div class="input-group">
         <label for="username">Usuário</label>
-        <input type="text" id="username" name="username" placeholder="Digite seu usuário" required aria-label="Usuário" />
+        <input type="text" id="username" name="username" placeholder="Digite seu usuário" required />
       </div>
       <div class="input-group">
         <label for="password">Senha</label>
-        <input type="password" id="password" name="password" placeholder="Digite sua senha" required aria-label="Senha" />
+        <input type="password" id="password" name="password" placeholder="Digite sua senha" required />
       </div>
       <button type="submit">Entrar</button>
-      <div id="error-message" class="error-message" style="display:none;">
-        Usuário ou senha inválidos.
-      </div>
+      <div id="error-message" class="error-message">Usuário ou senha inválidos.</div>
     </form>
   </div>
 
@@ -94,16 +95,15 @@
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
       if (username === '' || password === '') {
-        return false; // Bloqueia o envio do formulário se estiver vazio
+        return false;
       }
 
-      // Simulação de verificação (aqui você poderia validar com back-end)
       if (username !== 'admin' || password !== '123456') {
         document.getElementById('error-message').style.display = 'block';
-        return false; // Bloqueia o envio do formulário em caso de erro
+        return false;
       }
 
-      return true; // Permite o envio do formulário
+      return true;
     }
   </script>
 </body>
