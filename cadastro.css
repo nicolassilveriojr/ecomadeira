@@ -1,0 +1,86 @@
+/* Estilos da página de Cadastro de Obras */
+
+body {
+    background: #f5f7fa;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container do formulário */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.form-container p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Campos do formulário */
+.form-obras label {
+    font-weight: 600;
+    margin-top: 15px;
+    display: block;
+    color: #2c3e50;
+}
+
+.form-obras input,
+.form-obras select,
+.form-obras textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.form-obras input:focus,
+.form-obras select:focus,
+.form-obras textarea:focus {
+    border-color: #27ae60;
+    box-shadow: 0 0 4px rgba(39, 174, 96, 0.4);
+}
+
+/* Botão */
+.botao-verde {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.botao-verde:hover {
+    background: #219150;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}
