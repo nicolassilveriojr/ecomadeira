@@ -1,3 +1,29 @@
+/* 🎨 Variáveis Globais */
+:root {
+    --fonte-padrao: 'Inter', sans-serif;
+
+    --fundo-principal: #f0f4f8;
+    --fundo-secundario: #ffffff;
+
+    --texto-principal: #2e2e2e;
+    --texto-secundario: #555;
+    --texto-claro: #43a047;
+    --texto-links: #1e88e5;
+
+    --botao-principal: #43a047;
+    --botao-hover: #388e3c;
+
+    --borda-arredondada-pequena: 6px;
+    --borda-arredondada-media: 10px;
+    --borda-arredondada-grande: 16px;
+
+    --sombra-leve: 0px 2px 6px rgba(0,0,0,0.1);
+    --sombra-media: 0px 4px 12px rgba(0,0,0,0.15);
+
+    --transicao-suave: all 0.3s ease;
+}
+
+/* 🔽 O resto do seu CSS vem aqui */
 body {
     font-family: var(--fonte-padrao);
     background: var(--fundo-principal);
