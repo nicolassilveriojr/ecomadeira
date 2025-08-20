@@ -38,7 +38,8 @@ body {
     color: var(--texto-secundario);
     background-color: var(--fundo-principal);
     min-height: 100vh;
-    padding-top: 70px; /* compensação do menu fixo */
+    padding-top: 70px;
+    /* compensação do menu fixo */
     overflow-x: hidden;
 }
 
@@ -393,9 +394,9 @@ body {
     margin-top: 20px;
 }
 
-.categoria-videos{
-   display: flex;
-   overflow-x: auto;
-   gap: 10px;
+.categoria-videos {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    border-radius: 15px;
 }
-
