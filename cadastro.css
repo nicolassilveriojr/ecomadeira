@@ -1,17 +1,32 @@
 /* Geral */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* Variáveis de Cores */
+:root {
+    --light-green: #f0f5ee;
+    --dark-green: #2e8b57;
+    --darker-green: #1e6a41;
+    --olive-green: #6b8e23;
+    --dark-olive-green: #556b2f;
+    --text-color: #444;
+    --light-text-color: #666;
+    --medium-text-color: #555;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos do Corpo */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f5ee; /* A slightly more refined light green */
+    background-color: var(--light-green);
     margin: 0;
     padding: 0;
-    color: #444;
+    color: var(--text-color);
 }
 
 /* Header/Menu */
 .header {
-    background-color: #f0f5ee;
+    background-color: var(--light-green);
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -29,7 +44,7 @@ body {
 }
 
 .header nav a {
-    color: #2e8b57; /* Darker green for links */
+    color: var(--dark-green);
     text-decoration: none;
     margin-left: 25px;
     font-weight: 600;
@@ -37,7 +52,7 @@ body {
 }
 
 .header nav a:hover {
-    color: #1e6a41; /* A deeper green on hover */
+    color: var(--darker-green);
 }
 
 /* Seções */
@@ -47,7 +62,7 @@ body {
 }
 
 .section h2 {
-    color: #2e8b57;
+    color: var(--dark-green);
     font-size: 2.5em;
     font-weight: 700;
     margin-bottom: 20px;
@@ -60,14 +75,14 @@ body {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #6b8e23;
+    background-color: var(--olive-green);
     margin: 10px auto 0;
 }
 
 .section p {
-    color: #666;
+    color: var(--light-text-color);
     max-width: 800px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 30px;
     line-height: 1.6;
 }
 
@@ -83,7 +98,7 @@ body {
 .card {
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px var(--shadow-color);
     overflow: hidden;
     max-width: 450px;
     text-align: left;
@@ -108,14 +123,14 @@ body {
 }
 
 .card h3 {
-    color: #2e8b57;
+    color: var(--dark-green);
     font-weight: 600;
     margin-top: 0;
     font-size: 1.5em;
 }
 
 .card p {
-    color: #555;
+    color: var(--medium-text-color);
     font-size: 1em;
 }
 
@@ -123,7 +138,7 @@ body {
 .button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #6b8e23; /* Olive green */
+    background-color: var(--olive-green);
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
@@ -133,7 +148,7 @@ body {
 }
 
 .button:hover {
-    background-color: #556b2f; /* Darker olive green on hover */
+    background-color: var(--dark-olive-green);
     transform: translateY(-2px);
 }
 
@@ -144,7 +159,7 @@ body {
     background: #fff;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px var(--shadow-color);
 }
 
 .contact-form-container input,
@@ -152,7 +167,7 @@ body {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     font-size: 1em;
     transition: border-color 0.3s ease-in-out;
@@ -160,14 +175,14 @@ body {
 
 .contact-form-container input:focus,
 .contact-form-container textarea:focus {
-    border-color: #6b8e23;
+    border-color: var(--olive-green);
     outline: none;
     box-shadow: 0 0 5px rgba(107, 142, 35, 0.2);
 }
 
 .contact-form-container button {
     width: 100%;
-    background-color: #6b8e23;
+    background-color: var(--olive-green);
     color: white;
     padding: 18px;
     border: none;
@@ -179,14 +194,14 @@ body {
 }
 
 .contact-form-container button:hover {
-    background-color: #556b2f;
+    background-color: var(--dark-olive-green);
     transform: translateY(-2px);
 }
 
 /* Rodapé */
 .footer {
-    background-color: #f0f5ee;
-    color: #2e8b57;
+    background-color: var(--light-green);
+    color: var(--dark-green);
     text-align: center;
     padding: 30px 20px;
     border-top: 1px solid #d8e5d8;
@@ -202,7 +217,7 @@ body {
 }
 
 .footer-links a {
-    color: #2e8b57;
+    color: var(--dark-green);
     margin: 0 15px;
     text-decoration: none;
     font-weight: 600;
@@ -210,9 +225,10 @@ body {
 }
 
 .footer-links a:hover {
-    color: #1e6a41;
+    color: var(--darker-green);
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
     .header nav {
         display: none;
