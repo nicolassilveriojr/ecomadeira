@@ -30,6 +30,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--texto-secundario);
+    background: linear-gradient(135deg, #D4D8CF, #A9B8A2);
 }
 
 /* Container do formulário */
