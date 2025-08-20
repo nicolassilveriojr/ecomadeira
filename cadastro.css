@@ -97,7 +97,7 @@ body {
 .form-container button {
     width: 100%;
     background: var(--botao-principal);
-    color: white;
+    color: rgb(217, 255, 0);
     padding: 15px;
     border: none;
     border-radius: var(--borda-arredondada-pequena);
