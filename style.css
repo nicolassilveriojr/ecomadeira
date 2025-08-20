@@ -392,3 +392,10 @@ body {
     width: 100%;
     margin-top: 20px;
 }
+
+.categoria-videos{
+   display: flex;
+   overflow-x: auto;
+   gap: 10px;
+}
+

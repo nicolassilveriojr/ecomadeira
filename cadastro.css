@@ -22,11 +22,8 @@
 
     --transicao-suave: all 0.3s ease;
 }
-
-/* 🔽 O resto do seu CSS vem aqui */
 body {
     font-family: var(--fonte-padrao);
-    background: var(--fundo-principal);
     margin: 0;
     padding: 0;
     color: var(--texto-secundario);
