@@ -2,8 +2,8 @@
 :root {
     --fonte-padrao: 'Inter', sans-serif;
 
-    --fundo-principal: #f0f8f8,#24ffff;
-    --fundo-secundario: #ffffff;
+    --fundo-principal: #f0f8f8,#00ffff;
+    --fundo-secundario: #ffffff,#00ffff;
 
     --texto-principal: #2e2e2e;
     --texto-secundario: #555;
