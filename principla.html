@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco-Wood</title>
+    <title>Obras - Sistema</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -12,100 +12,53 @@
 
 <body>
     <nav class="navbar sticky">
-        <a href="principla.html">Início</a>
+        <a href="principal.html">Início</a>
         <a href="sobre.html">Sobre</a>
-        <a href="tabela.html">Produtos</a>
+        <a href="cadastro-obras.html">Cadastro de Obras</a>
+        <a href="#obras">Obras em Andamento</a>
         <a href="#depoimentos">Avaliações</a>
         <a href="#contato">Contato</a>
     </nav>
 
     <section class="principal" id="home">
         <div class="container__caixa">
-            <h1 class="main-section-title">Eco-Wood</h1>
-            <img src="img/ecomadeira.jpg" alt="Imagem Principal da Eco-Wood" class="container_imagem rounded-image">
-            <a href="tabela.html" class="container_botao botao-verde">Tabela de produtos</a>
+            <h1 class="main-section-title">Sistema de Obras</h1>
+            <img src="img/ecomadeira.jpg" alt="Imagem Principal" class="container_imagem rounded-image">
+            <a href="cadastro-obras.html" class="container_botao botao-verde">Cadastrar Obras</a>
             <a href="sobre.html" id="sobre-nos" class="container_botao botao-transparente">Sobre Nós</a>
-            <p class="sustainability-text">A beleza natural com o compromisso da sustentabilidade.</p>
+            <p class="sustainability-text">Gerencie suas obras de forma simples e eficiente.</p>
         </div>
     </section>
 
     <main>
-        <section class="main-section secundario" id="produtos" data-aos="fade-up">
-            <img src="img/nicolas neto.jpg" alt="Imagem de Produtos Eco-Wood" class="secundario__imagem rounded-image">
+        <!-- Sessão de Obras em Andamento -->
+        <section class="main-section secundario" id="obras" data-aos="fade-up">
+            <img src="img/obras.jpg" alt="Obras em Andamento" class="secundario__imagem rounded-image">
             <div class="container__descricao">
-                <h2 class="main-section-title">Faça a diferença com estilo:</h2>
+                <h2 class="main-section-title">Obras em Andamento</h2>
                 <p class="main-section-text">
-                    conheça nossos produtos feitos com madeira de reflorestamento, sinônimo de beleza, qualidade e
-                    respeito ao meio ambiente.
+                    Acompanhe o progresso das suas construções em tempo real. 
+                    Veja status, prazos e detalhes das obras registradas no sistema.
                 </p>
-                <a href="tabela.html" class="container_botao botao-verde">Veja a Linha Completa</a>
+                <a href="cadastro-obras.html" class="container_botao botao-verde">Cadastrar Nova Obra</a>
             </div>
         </section>
 
-        <section class="main-section dispositivos" data-aos="fade-right">
-            <h2 class="main-section-title">Dispositivos Compatíveis</h2>
-            <ul class="dispositivos_lista">
-                <li class="lista_item">Smartphone</li>
-                <li class="lista_item">Tablet</li>
-                <li class="lista_item">Computador</li>
-            </ul>
-        </section>
-
-        <section class="galeria-produtos" data-aos="zoom-in">
-            <h2 class="main-section-title">Nossos Produtos</h2>
-            <div class="produtos-grid">
-                <div class="produto-item">
-                    <img src="img/floresta.jpeg" alt="Materia prima">
-                    <h3>Matéria-prima de Origem Sustentável</h3>
-                    <p>Nossas madeiras são de reflorestamento, garantindo produtos ecológicos e de alta qualidade.
-                        Perfeitas para decks, fachadas e ambientes externos que exigem durabilidade.</p>
-                </div>
-                <div class="produto-item">
-                    <img src="img/contrução.jpeg" alt="Em uso">
-                    <h3>Aplicações Versáteis</h3>
-                    <p>Com a Eco-Madeira, sua criatividade não tem limites. Nossas madeiras são ideais para móveis
-                        finos, acabamentos de luxo e estruturas que combinam beleza, resistência e responsabilidade
-                        ambiental.
-
-                    </p>
-                </div>
-                <div class="produto-item">
-                    <img src="img/ultima...jpeg" alt="Madeira de Eucalipto">
-                    <h3>Madeira de Eucalipto Certificada</h3>
-                    <p> O eucalipto é a escolha sustentável para a sua obra. Com sua resistência e versatilidade, é a
-                        opção ideal para construções, pisos e projetos que buscam um excelente custo-benefício.</p>
-                </div>
-            </div>
-        </section>
+        <!-- Tirei a parte "Nossos Produtos" -->
     </main>
 
     <section class="avaliacoes-clientes" id="depoimentos">
-        <h2>O que nossos clientes dizem sobre a Eco-Wood</h2>
+        <h2>O que nossos clientes dizem</h2>
         <div class="container-avaliacoes">
             <div class="avaliacao-item">
                 <div class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"Site confiável e produtos de alta qualidade! Recomendo muito!"</p>
+                <p>"Sistema prático e confiável!"</p>
                 <span>- Maria S.</span>
             </div>
             <div class="avaliacao-item">
                 <div class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"Fiquei impressionado com a beleza da madeira e a entrega rápida. Confiança total!"</p>
+                <p>"Me ajudou muito a organizar minhas obras."</p>
                 <span>- João C.</span>
-            </div>
-            <div class="avaliacao-item">
-                <div class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"A Eco-Madeira superou minhas expectativas. Site fácil de usar e seguro."</p>
-                <span>- Ana L.</span>
-            </div>
-            <div class="avaliacao-item">
-                <div class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"Madeiras incríveis e atendimento excelente. É um site que você pode confiar!"</p>
-                <span>- Pedro F.</span>
-            </div>
-            <div class="avaliacao-item">
-                <div class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"Comprei sem medo! Site seguro e produtos que fazem a diferença."</p>
-                <span>- Carla G.</span>
             </div>
         </div>
     </section>
@@ -122,15 +75,14 @@
 
     <footer class="rodape">
         <div class="footer-logo">
-            <img src="img/logo.png" alt="Logo da Empresa Eco-Wood">
+            <img src="img/logo.png" alt="Logo do Sistema">
         </div>
         <ul class="rodape_lista">
             <li><a href="#" class="link-verde">Idioma</a></li>
-            <li><a href="#" class="link-verde">Dispositivos</a></li>
             <li><a href="#" class="link-verde">Política de Privacidade</a></li>
             <li><a href="#" class="link-verde">Ajuda</a></li>
         </ul>
-        <p class="footer-copyright">Eco-Wood © 2024. Todos os direitos reservados.</p>
+        <p class="footer-copyright">Sistema de Obras © 2024. Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
