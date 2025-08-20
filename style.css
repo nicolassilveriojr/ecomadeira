@@ -395,8 +395,12 @@ body {
 }
 
 .categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 0;
+
 }
