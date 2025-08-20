@@ -2,7 +2,7 @@
 :root {
     --fonte-padrao: 'Inter', sans-serif;
 
-    --fundo-principal: #f0f4f8;
+    --fundo-principal: #f0f8f8,#24ffff;
     --fundo-secundario: #ffffff;
 
     --texto-principal: #2e2e2e;
