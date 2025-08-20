@@ -1,68 +1,43 @@
-/* ====MENU FIXO====*/
-
-.navbar.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: var(--fundo-sidebar);
-    padding: 15px 30px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    box-shadow: var(--sombra-media);
-    z-index: 1000;
+body {
+    font-family: var(--fonte-padrao);
+    background: var(--fundo-principal);
+    margin: 0;
+    padding: 0;
+    color: var(--texto-secundario);
 }
 
-.navbar a {
-    color: var(--texto-links);
-    font-weight: 600;
-    text-decoration: none;
-    transition: var(--transicao-suave);
-}
-
-.navbar a:hover {
-    color: var(--botao-hover);
-}
-
-
-
-/* Container geral */
+/* Container do formulário */
 .form-container {
-    max-width: 650px;
-    margin: 50px auto;
-    background: #fff;
+    max-width: 700px;
+    margin: 60px auto;
+    background: var(--fundo-secundario);
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    text-align: left;
+    border-radius: var(--borda-arredondada-grande);
+    box-shadow: var(--sombra-media);
     animation: fadeIn 0.6s ease-in-out;
 }
 
 /* Título */
 .form-container h2 {
-    color: var(--dark-green);
-    font-size: 2em;
+    color: var(--texto-principal);
+    font-size: 2rem;
     margin-bottom: 10px;
     text-align: center;
 }
 
 .form-container p {
-    color: var(--light-text-color);
+    color: var(--texto-secundario);
     margin-bottom: 25px;
     text-align: center;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
-/* Grupos */
-.form-group {
-    margin-bottom: 20px;
-}
-
+/* Labels */
 .form-container label {
     font-weight: 600;
     margin-bottom: 8px;
     display: block;
-    color: var(--medium-text-color);
+    color: var(--texto-principal);
 }
 
 /* Inputs */
@@ -71,45 +46,64 @@
 .form-container textarea {
     width: 100%;
     padding: 14px 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
+    border: 1px solid #cfd8dc;
+    border-radius: var(--borda-arredondada-media);
     font-size: 1em;
-    background: #f9faf9;
-    transition: all 0.3s ease-in-out;
+    background: #f9fff9;
+    transition: var(--transicao-suave);
+}
+
+/* Placeholder */
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+    color: #9e9e9e;
 }
 
 /* Foco */
 .form-container input:focus,
 .form-container select:focus,
 .form-container textarea:focus {
-    border-color: var(--dark-green);
+    border-color: var(--texto-claro);
     outline: none;
-    box-shadow: 0 0 8px rgba(46, 139, 87, 0.25);
+    box-shadow: 0 0 8px rgba(102, 187, 106, 0.4);
     background: #fff;
 }
 
 /* Botão */
 .form-container button {
     width: 100%;
-    background: var(--olive-green);
+    background: var(--botao-principal);
     color: white;
     padding: 15px;
     border: none;
-    border-radius: 50px;
+    border-radius: var(--borda-arredondada-pequena);
     font-size: 1.1em;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 12px rgba(107, 142, 35, 0.3);
+    transition: var(--transicao-suave);
+    box-shadow: var(--sombra-leve);
+    margin-top: 15px;
 }
 
 .form-container button:hover {
-    background: var(--dark-olive-green);
-    transform: translateY(-3px);
+    background: var(--botao-hover);
+    transform: translateY(-2px);
 }
 
-/* Animação suave */
+/* Links */
+.form-container a {
+    color: var(--texto-links);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao-suave);
+}
+
+.form-container a:hover {
+    color: var(--texto-claro);
+}
+
+/* Animação */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
