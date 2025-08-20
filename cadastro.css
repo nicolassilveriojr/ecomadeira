@@ -1,7 +1,6 @@
 /* 🎨 Variáveis Globais */
 :root {
     --fonte-padrao: 'Inter', sans-serif;
-    --fundo-sidebar: #c6fdc1;
     --fundo-principal: #f0f8f8,#00ffff;
     --fundo-secundario: #ffffff,#00ffff;
 
@@ -29,19 +28,6 @@ body {
     color: var(--texto-secundario);
     background: linear-gradient(135deg, #D4D8CF, #A9B8A2);
 }
-
-/* menu fixo */
-.navbar.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: var(--fundo-sidebar);
-    padding: 15px 30px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    box-shadow: var(--sombra-media);
-    z-index: 1000;
 
 
 /* Container do formulário */
