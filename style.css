@@ -395,9 +395,9 @@ body {
 }
 
 .categoria-videos {
-    width: 800px;
-    height: auto;
-    display: block;
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
     border-top-left-radius: 20px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 50px;
