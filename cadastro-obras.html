@@ -10,77 +10,45 @@
 </head>
 
 <body>
-    <nav class="navbar sticky">
-        <a href="principla.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="cadastro-obras.html" class="active">obras em andamento</a>
-    </nav>
+<div class="form-container">
+    <h2>📋 Cadastro de Obras</h2>
+    <p>Preencha as informações abaixo para registrar uma nova obra no sistema.</p>
 
-    <main class="form-container">
-        <h1 class="main-section-title">Cadastro de Obras</h1>
-        <p>Preencha as informações abaixo para registrar uma nova obra no sistema.</p>
-
-        <form id="form-obras" class="form-obras">
-            <label for="nome-obra">Nome da Obra</label>
-            <input type="text" id="nome-obra" name="nome-obra" placeholder="Ex: Construção Residencial" required>
-
-            <label for="responsavel">Responsável</label>
-            <input type="text" id="responsavel" name="responsavel" placeholder="Nome do responsável" required>
-
-            <label for="status">Status da Obra</label>
-            <select id="status" name="status" required>
-                <option value="">Selecione...</option>
-                <option value="Planejamento">Planejamento</option>
-                <option value="Em Andamento">Em Andamento</option>
-                <option value="Concluída">Concluída</option>
-            </select>
-
-            <label for="prazo">Prazo de Conclusão</label>
-            <input type="date" id="prazo" name="prazo" required>
-
-            <label for="descricao">Descrição da Obra</label>
-            <textarea id="descricao" name="descricao" rows="4" placeholder="Detalhes da obra..." required></textarea>
-
-            <button type="submit" class="botao-verde">Cadastrar Obra</button>
-        </form>
-    </main>
-
-    <footer class="rodape">
-        <div class="footer-logo">
-            <img src="img/logo.png" alt="Logo do Sistema">
+    <form>
+        <div class="form-group">
+            <label for="nomeObra">🏗️ Nome da Obra</label>
+            <input type="text" id="nomeObra" placeholder="Ex: Construção Residencial">
         </div>
-        <p class="footer-copyright">Sistema de Obras © 2024. Todos os direitos reservados.</p>
-    </footer>
 
-    <!-- SCRIPT para salvar obras -->
-    <script>
-        document.getElementById("form-obras").addEventListener("submit", function (e) {
-            e.preventDefault();
+        <div class="form-group">
+            <label for="responsavel">👤 Responsável</label>
+            <input type="text" id="responsavel" placeholder="Nome do responsável">
+        </div>
 
-            // Pega os valores do formulário
-            const obra = {
-                nome: document.getElementById("nome-obra").value,
-                responsavel: document.getElementById("responsavel").value,
-                status: document.getElementById("status").value,
-                prazo: document.getElementById("prazo").value,
-                descricao: document.getElementById("descricao").value
-            };
+        <div class="form-group">
+            <label for="status">📌 Status da Obra</label>
+            <select id="status">
+                <option value="">Selecione...</option>
+                <option value="andamento">Em andamento</option>
+                <option value="concluida">Concluída</option>
+                <option value="paralisada">Paralisada</option>
+            </select>
+        </div>
 
-            // Recupera obras já salvas ou cria uma lista nova
-            let obras = JSON.parse(localStorage.getItem("obras")) || [];
+        <div class="form-group">
+            <label for="prazo">⏳ Prazo de Conclusão</label>
+            <input type="date" id="prazo">
+        </div>
 
-            // Adiciona a nova obra
-            obras.push(obra);
+        <div class="form-group">
+            <label for="descricao">📝 Descrição da Obra</label>
+            <textarea id="descricao" rows="4" placeholder="Detalhes da obra..."></textarea>
+        </div>
 
-            // Salva no localStorage
-            localStorage.setItem("obras", JSON.stringify(obras));
+        <button type="submit">✅ Cadastrar Obra</button>
+    </form>
+</div>
 
-            alert("Obra cadastrada com sucesso!");
-
-            // Reseta o formulário
-            document.getElementById("form-obras").reset();
-        });
-    </script>
 </body>
 
 </html>

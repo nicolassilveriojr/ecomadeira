@@ -1,57 +1,69 @@
-/* Container do formulário */
+/* Container geral */
 .form-container {
-    max-width: 700px;
+    max-width: 650px;
     margin: 50px auto;
     background: #fff;
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px var(--shadow-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     text-align: left;
+    animation: fadeIn 0.6s ease-in-out;
 }
 
+/* Título */
 .form-container h2 {
     color: var(--dark-green);
     font-size: 2em;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .form-container p {
     color: var(--light-text-color);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1em;
 }
 
-/* Campos */
+/* Grupos */
+.form-group {
+    margin-bottom: 20px;
+}
+
 .form-container label {
-    display: block;
-    margin-bottom: 8px;
     font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
     color: var(--medium-text-color);
 }
 
+/* Inputs */
 .form-container input,
 .form-container select,
 .form-container textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
+    padding: 14px 15px;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 1em;
-    transition: border-color 0.3s ease-in-out;
+    background: #f9faf9;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Foco */
 .form-container input:focus,
 .form-container select:focus,
 .form-container textarea:focus {
-    border-color: var(--olive-green);
+    border-color: var(--dark-green);
     outline: none;
-    box-shadow: 0 0 5px rgba(107, 142, 35, 0.2);
+    box-shadow: 0 0 8px rgba(46, 139, 87, 0.25);
+    background: #fff;
 }
 
 /* Botão */
 .form-container button {
     width: 100%;
-    background-color: var(--olive-green);
+    background: var(--olive-green);
     color: white;
     padding: 15px;
     border: none;
@@ -59,10 +71,17 @@
     font-size: 1.1em;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(107, 142, 35, 0.3);
 }
 
 .form-container button:hover {
-    background-color: var(--dark-olive-green);
-    transform: translateY(-2px);
+    background: var(--dark-olive-green);
+    transform: translateY(-3px);
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
 }
