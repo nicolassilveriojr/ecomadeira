@@ -1,3 +1,31 @@
+/* ====MENU FIXO====*/
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--fundo-sidebar);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    box-shadow: var(--sombra-media);
+    z-index: 1000;
+}
+
+.navbar a {
+    color: var(--texto-links);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transicao-suave);
+}
+
+.navbar a:hover {
+    color: var(--botao-hover);
+}
+
+
+
 /* Container geral */
 .form-container {
     max-width: 650px;
